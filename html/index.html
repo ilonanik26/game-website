@@ -3,258 +3,179 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nostlgy School Run </title>
+        <title>Nostlgy School Run</title>
+
         <link
             href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
             rel="stylesheet">
+
         <style>
-            /* Sivun taustaan tulee liukuvärjäys vihreän ja sinisen sävyillä */
-            body {
-                background-image: linear-gradient(rgba(52, 251, 122, 0.5), rgba(70, 232, 208, 0.5));
-                background-repeat: no-repeat;
-                min-height: 100vh;  /* Koko näkymän korkuinen vähintään */  
-                font-family: 'Press Start 2P'; /* Retrofontti käytössä */
-                line-height: 1.8; /* Rivien välinen korkeus */
-                font-size: 20px;
-                margin: 0; /* Poistaa oletusmarginaalit */
+        body {
+            background-image: linear-gradient(rgba(52, 251, 122, 0.5), rgba(70, 232, 208, 0.5));
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            font-family: 'Press Start 2P';
+            line-height: 1.8;
+            font-size: 20px;
+            margin: 0;
+        }
 
-            }
-            /* Ylätunnisteen (bannerin) kuvalle pyöristetty alareuna */
-            .banner img {
-                width:100%; /* Kuva täyttää koko leveyden */
-                border-radius: 0 0 50px 50px; /* Pyöristää alakulmat */
-                float: left; /* Asettaa kuvan kellumaan vasemmalle */
-            }
-             /* Navigointilista: listaelementit kelluvat vierekkäin */
-            li {
-                float:left;
-            }
-            /* Linkkien ulkoasu navigaatiossa */
-            a {
-                display:block;
-                padding: 14px 16px;
-                color: white;
-                text-align: center;
-                text-decoration: none;
-            }
-            /* Navigaatiopalkki */
-            ul {
-                background-color: rgb(22, 145,22);/* Tummanvihreä */
-                list-style-type: none; /* Poistaa listamerkit */
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                
-            }
-            /* Navigaation säilö */
-            .navbar {
-                display: flex; 
-                align-items: center;
-                justify-content: space-between; /* Jakaa logon ja linkit tasaisesti */
-                padding: 10px 20px;
-                background-color: rgb(22, 145,22);
-            }
+        /* Banner (CSS hoitaa kuvan) */
+        .banner {
+            width: 100%;
+            height: 500px;
+            background-image: url("images/banner.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0 0 50px 50px;
+        }
 
-                /* Logo navigaatiossa */
-            .logo{
-                width:100px;
-                border-radius: 50px;
-                float: left;
-                margin-right: 10px;
-            }
-            /* Hover-efekti linkille */
-            li a:hover{
-                background-color: #111; /* Tummempi tausta kun hiiri on päällä */
-            }
+        /* Navbar */
+        ul {
+            background-color: rgb(22, 145, 22);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-            /* Aktiivisen sivun linkin väri */
-            .active {
-                background-color: darkgreen;
-            }
-            /* Bannerin tyyli*/
-            .banner{
-                width: 100%;
-                height: 500px;
-                display: flex;
-                background-image: url("images/banner.png");
-                background-repeat: no-repeat;
-                background-size: cover;
-                top: 50%;
+        li {
+            float: left;
+        }
 
-               
-            }
-            /* Perustekstien tyyli */
-            p {
-                font-weight: bold;
-                text-align: center;
-                font-size: large;
-                margin-top: 40px;
-                justify-content:center ;
-            }
-            /* Pääkonteineri sisällölle */
-            .content{
-                width: 100%;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                font-size: 30px;
-                
+        a {
+            display: block;
+            padding: 14px 16px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
 
+        li a:hover {
+            background-color: #111;
+        }
 
-            }
-            /* Alisisältö: keskitä, säädä fonttikokoja, marginaalit */
-            .content-child {
-                width: 70%;
-                text-align: center;
-                font-size: medium;
-                margin-top: 100px;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                font-size: large;
-                
-            }
-             /* Isompi teksti - yleensä otsikkomainen */
-            .first-part {
-                font-size: 1.2em;
-                margin-bottom: 20px;
-                font-weight: bold;
-                margin-right: 20px ;
-                text-align: right;
-                font-size: 40px;
-              
-            
-            }
+        .active {
+            background-color: darkgreen;
+        }
 
-             /* Kevyempi selittävä teksti */
-            .second-part {
-                font-size: 1em;
-                font-weight: lighter;
-                font-size: 20px;
-                
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: rgb(22, 145, 22);
+        }
 
-            }
-            /* Pelin ominaisuuksien lista */
-            .game-features {
-                text-align: left;
-               margin-left: 20px;
-               font-size: 20px;
-               background-color: transparent;
-               
-            }
-            /* Ominaisuuksien lista (ul) ilman taustaväriä */
-            ul.Features {
-                background-color: transparent;
-            }
-             /* Otsikoiden tyyli */
-            h2 {
-                font-size: 36px;
-                text-decoration: underline;
-            }
+        .logo {
+            width: 100px;
+            border-radius: 50px;
+            margin-right: 10px;
+        }
 
-             /* Yksittäinen ominaisuus otsikko */
-            .feature {
-                font-size: 24px;
-                font-weight: bold;
-                
-            }
+        .language-selector img {
+            width: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
 
-            /* Ominaisuuden kuvaus */
-            .feature-description {
-                font-size: 20px;
-                font-weight: lighter;
-                margin-top: 10px;
-                padding-bottom: 20px;
-             }
-             /* Hahmogalleria */
-            .character-gallery {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 40px;
-                margin-top: 50px;
-                flex-wrap: wrap; /* Joustaa pienillä näytöillä */
-            }
-             /* Hahmokuvat gallerian sisällä */
-            .character-gallery img {
-                width: 300px;
-                height: auto;
-                border-radius: 10px;
-                box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-                margin-bottom: 10px; 
-            }
-            .character-gallery h2 {
-                font-size: 36px;
-                font-weight:bold;
-                margin-bottom: 30px;
-                text-decoration: underline;
-            }
-            /* Yksittäinen hahmo */
-            .character {
-                display: inline-block;
-                margin: 0 20px;
-                text-align: center;
-            }
-            .character img {
-                width: 300px;
-                height: auto;
-                border-radius:10px;
-                box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-                margin-bottom: 10px;
-            }
+        .active-language {
+            border: 2px solid darkgreen;
+        }
 
-            .character-description {
-                font-size: 16px;
-                font-weight: normal;
-                color: #333;
-                margin-top: 10px;
-            }
-              html {
-                scroll-behavior: smooth;
-            }
-             /* Kielivalinnan lippujen ulkoasu */
-            .language-selector img {
-                width:30px;
-                margin-left: 10px;
-                cursor: pointer;
-            }
+        /* Content */
+        p {
+            font-weight: bold;
+            text-align: center;
+            font-size: large;
+            margin-top: 40px;
+        }
 
-            /* Aktiivinen kieli (esim. Suomi valittuna) */
-            .active-language {
-                border: 2px solid darkgreen;
-            }
-            /* Latausnappi */
-            .download-button {
-                display: inline-block;
-                background-color: darkgreen;
-                color: white;
-                font-size: 20px;
-                font-family:'Press Start 2P';
-                padding: 15px 30px;
-                margin: 50px auto;
-                border: none;
-                border-radius: 10px;
-                cursor: pointer;
-                text-align: center;
-                text-decoration: none;
-                box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
-                transition: background-color 0.3s ease;
-            }
+        .content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    /* Hover-efekti napille */
-            .download-button:hover{
-                background-color: green;
-            }
-            
-        </style>
+        .content-child {
+            width: 70%;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .first-part {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .second-part {
+            font-size: 20px;
+            font-weight: lighter;
+        }
+
+        h2 {
+            font-size: 36px;
+            text-decoration: underline;
+        }
+
+        .feature {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .feature-description {
+            font-size: 20px;
+            font-weight: lighter;
+            margin-top: 10px;
+            padding-bottom: 20px;
+        }
+
+        /* Characters */
+        .character-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .character img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .character-description {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: darkgreen;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 50px auto;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .download-button:hover {
+            background-color: green;
+        }
+    </style>
     </head>
+
     <body>
 
         <nav class="navbar">
-            <img src="images/logowobg.png" class="logo" alt="logo"
-                id="logo-link">
+            <img src="images/logowobg.png" class="logo" alt="logo">
+
             <ul>
                 <li><a href="index.html" id="home-link">Home</a></li>
                 <li><a href="news.html" id="news-link">News</a></li>
@@ -263,128 +184,97 @@
                 <li><a href="about-yhta.html"
                         id="yhta-link">YHTÄ-project</a></li>
             </ul>
+
             <div class="language-selector">
-                <img src="images/finnish .png" alt="Finnish"
-                    onclick="setLanguage('fi')" id="fi-lang">
-                <img src="images/English.png" alt="English"
-                    onclick="setLanguage('en')" id="en-lang"
+                <img src="images/finnish.png" alt="Finnish" id="fi-lang">
+                <img src="images/english.png" alt="English" id="en-lang"
                     class="active-language">
             </div>
         </nav>
 
-        <div class="banner">
-            <img src="images/banner.png" alt="An image of our banner"
-                class="banner">
-        </div>
+        <div class="banner"></div>
 
-        <p id="intro-text">Nostalgy School Run by Lizzard Production </p>
+        <p>Nostalgy School Run by Lizzard Production</p>
 
         <div style="text-align: center;">
             <a href="https://lizzard-productions.itch.io/nostalgy-school-run"
-                target="_blank" class="download-button" id="download-button">
+                target="_blank" class="download-button">
                 Download Game
             </a>
         </div>
 
         <section class="content">
             <div class="content-child">
-                <p id="first-part" class="first-part">Hey there!</p>
-                <p id="second-part-1" class="second-part">
+                <p class="first-part">Hey there!</p>
+
+                <p class="second-part">
                     Your parents want you to know the traffic rules — but you
-                    couldn’t care less about learning them and just want to play
-                    with your friends? Then we’ve got the perfect option for
-                    you! You and your parents are both going to love it!</p>
+                    couldn’t care less…
+                </p>
 
-                <p id="second-part-2" class="second-part">
-                    Nostalgy School Run is the game where
-                    kids can play freely while learning about traffic and safety
-                    equipment at the same time. This way, both parents and
-                    children are happy —
-                    and the roads become safer, too.</p>
+                <p class="second-part">
+                    Nostalgy School Run is the game where kids can play freely
+                    while learning…
+                </p>
 
-                <p id="second-part-3" class="second-part">
-                    On this website, you’ll get to explore our
-                    game, meet its characters, get to know the developers behind
-                    it, and even
-                    learn about our partner. Stay tuned and don’t forget to
-                    check out our latest updates in the News section!</p>
+                <p class="second-part">
+                    On this website, you’ll get to explore our game, meet its
+                    characters…
+                </p>
 
-                <div id="game-features-title" class="game-features">
-                    <h2>Game Features:</h2>
-                    <div id="endless-challenges" class="feature">
-                        Endless Challenges
-                        <div id="endless-challenges-description"
-                            class="feature-description">
-                            Dodge speeding cars, avoid reckless cyclists,
-                            and navigate unpredictable pedestrians as you
-                            race through an ever-changing environment based
-                            on real-life traffic scenarios from Tampere.
-                        </div>
+                <h2>Game Features:</h2>
+
+                <div class="feature">
+                    Endless Challenges
+                    <div class="feature-description">
+                        Dodge speeding cars, avoid reckless cyclists…
                     </div>
-                    <div id="learn-traffic-rules" class="feature">
-                        Learn Traffic Rules
-                        <div id="learn-traffic-rules-description"
-                            class="feature-description">
-                            Every obstacle is a lesson! From crossing at
-                            zebra crossings to obeying traffic lights,
-                            players will pick up essential traffic safety
-                            rules while having fun.
-                        </div>
-                    </div>
+                </div>
 
-                    <div id="pixel-perfect-graphics" class="feature">
-                        Pixel-Perfect Graphics
-                        <div id="pixel-perfect-graphics-description"
-                            class="feature-description">
-                            Immerse yourself in charming retro-style pixel
-                            art that brings the chaotic streets to life.
-                        </div>
+                <div class="feature">
+                    Learn Traffic Rules
+                    <div class="feature-description">
+                        Every obstacle is a lesson…
                     </div>
+                </div>
 
-                    <div id="dynamic-gameplay" class="feature">
-                        Dynamic Gameplay
-                        <div id="dynamic-gameplay-description"
-                            class="feature-description">
-                            The further you run, the faster it gets! Stay
-                            sharp as new challenges appear to test your
-                            skills.
-                        </div>
+                <div class="feature">
+                    Pixel-Perfect Graphics
+                    <div class="feature-description">
+                        Immerse yourself in charming retro-style pixel art…
+                    </div>
+                </div>
+
+                <div class="feature">
+                    Dynamic Gameplay
+                    <div class="feature-description">
+                        The further you run, the faster it gets…
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="character-gallery">
-            <h2 id="characters-title">Our Characters</h2>
+            <h2>Our Characters</h2>
+
             <div class="character">
                 <img src="images/kido.png" alt="Character 1">
-                <p id="character-kiddo" class="character-description">Kiddo -
-                    the fastest kid on the
-                    block! Dodging cars, jumping over potholes, and outrunning
-                    chaos, all while trying to make it to school on time.</p>
+                <p class="character-description">Kiddo – the fastest kid on the
+                    block…</p>
             </div>
 
             <div class="character">
                 <img src="images/cat.png" alt="Character 2">
-                <p id="character-nopsu" class="character-description">Nopsu –
-                    the fastest cat in
-                    town, so quick you’ll barely see him coming! He’s the master
-                    of stealth, slipping through the shadows and vanishing in
-                    the blink of an eye. Whether it’s swiping treats or darting
-                    around corners, Nopsu is always a step ahead.</p>
+                <p class="character-description">Nopsu – the fastest cat in
+                    town…</p>
             </div>
 
             <div class="character">
                 <img src="images/grandma.png" alt="Character 3">
-                <p id="character-grandma"
-                    class="character-description">Mummimamma - she might look
-                    like she’s taking a nap, but don’t be fooled! When our hero
-                    tries to race through, Granny’s and her walking stick always
-                    in the way. Getting past Granny is no easy task, but watch
-                    out – she’s quicker than she looks!</p>
+                <p class="character-description">Mummimamma – she might look
+                    like she’s taking a nap…</p>
             </div>
         </section>
-
         <script>
             function setLanguage(lang) {
                 const enText = {
@@ -413,7 +303,7 @@
                     "about-link": "About Us",
                     "yhta-link": "YHTÄ-Project"
                 };
-    
+
                 const fiText = {
                     "intro-text": "Nostalgy School Run Lizzard Productionilta",
                     "download-button": "Lataa Peli",
@@ -440,9 +330,9 @@
                     "about-link": "Meistä",
                     "yhta-link": "YHTÄ-Hanke"
                 };
-    
+
                 const text = lang === 'fi' ? fiText : enText;
-    
+
                 // Päivitä kaikki elementit kielikohtaisilla teksteillä
                 for (const key in text) {
                     const element = document.getElementById(key);
@@ -450,7 +340,7 @@
                         element.textContent = text[key];
                     }
                 }
-    
+
                 // Toggle language selector active state
                 const languages = document.querySelectorAll('.language-selector img');
                 languages.forEach(langImg => langImg.classList.remove('active-language'));
