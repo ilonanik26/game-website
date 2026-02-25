@@ -16,7 +16,7 @@
             font-family: 'Press Start 2P'; /* Retromainen fontti, muistuttaa videopelien fontteja */
             font-size: 20px;  /* Lopullinen fonttikoko määritelty tähän */
             margin:0; /* Poistaa oletusmarginaalit sivulta */
-            
+
         }
         ul {
             background-color: rgb(22, 145, 22); /* Yläpalkin taustaväri vihreäksi */
@@ -27,7 +27,7 @@
         }
         li {
             float: left; /* Navigaatiolinkit vierekkäin vaakarivissä */
-    
+
         }
         a {
             display: block;
@@ -40,7 +40,7 @@
         }
 
         .navbar {
-                display: flex; 
+                display: flex;
                 align-items: center;
                 justify-content: space-between;
                  /* Asettaa sisällöt (esim. logo vasemmalle, linkit oikealle) */
@@ -83,20 +83,22 @@
     <body>
         <nav class="navbar">
             <a href="#" class="logo" id="logo-link">
-                <img src="images/logowobg.png" alt="logo">
+                <img src="../images/logowobg.png" alt="logo">
             </a>
             <ul>
-                <li><a href="index.html" id="home-link">Home</a></li>
-                <li><a href="news.html" id="news-link">News</a></li>
-                <li><a href="contact.html" id="contact-link">Contact</a></li>
-                <li><a href="about-team.html" id="about-link">About Us</a></li>
-                <li><a class="active" href="about-yhta.html"
+                <li><a href="../html/index.html" id="home-link">Home</a></li>
+                <li><a href="../html/news.html" id="news-link">News</a></li>
+                <li><a href="../html/contact.html"
+                        id="contact-link">Contact</a></li>
+                <li><a href="../html/about-team.html" id="about-link">About
+                        Us</a></li>
+                <li><a class="active" href="../html/about-yhta.html"
                         id="yhta-link">YHTÄ-project</a></li>
             </ul>
             <div class="language-selector">
-                <img src="images/finnish .png" alt="Finnish"
+                <img src="../images/finnish .png" alt="Finnish"
                     onclick="setLanguage('fi')">
-                <img src="images/English.png" alt="English"
+                <img src="../images/English.png" alt="English"
                     onclick="setLanguage('en')" class="active-language">
             </div>
         </nav>
@@ -120,7 +122,7 @@
         </section>
 
         <div style="text-align: center; margin: 40px 0;">
-            <img src="images/Yhtä logo.jpg" alt="YHTÄ Logo"
+            <img src="../images/Yhtä logo.jpg" alt="YHTÄ Logo"
                 style="max-width: 100%; height: auto; border-radius: 12px;">
         </div>
 

@@ -44,7 +44,7 @@
         }
 
         .navbar {
-                display: flex; 
+                display: flex;
                 align-items: center;
                 justify-content: space-between;
                  /* Flexbox asettaa logon vasemmalle ja linkit oikealle */
@@ -198,22 +198,23 @@
     <body>
         <nav class="navbar">
             <a href="#" class="logo" id="logo">
-                <img src="images/logowobg.png" alt="logo">
+                <img src="../images/logowobg.png" alt="logo">
             </a>
 
             <ul>
-                <li><a href="index.html" id="home-link">Home</a></li>
-                <li><a href="news.html" id="news-link">News</a></li>
-                <li><a class="active" href="contact.html"
+                <li><a href="../html/index.html" id="home-link">Home</a></li>
+                <li><a href="../html/news.html" id="news-link">News</a></li>
+                <li><a class="active" href="../html/contact.html"
                         id="contact-link">Contact</a></li>
-                <li><a href="about-team.html" id="about-link">About Us</a></li>
-                <li><a href="about-yhta.html"
+                <li><a href="../html/about-team.html" id="about-link">About
+                        Us</a></li>
+                <li><a href="../html/about-yhta.html"
                         id="yhta-link">YHTÄ-project</a></li>
             </ul>
             <div class="language-selector">
-                <img src="images/finnish .png" alt="Finnish"
+                <img src="../images/finnish .png" alt="Finnish"
                     onclick="setLanguage('fi')" class="active-language">
-                <img src="images/English.png" alt="English"
+                <img src="../images/English.png" alt="English"
                     onclick="setLanguage('en')">
             </div>
         </nav>
@@ -221,25 +222,25 @@
 
         <div class="team-container" id="team-container">
             <div class="team-member">
-                <img src="images/Sardor.JPG" alt="Sardor Mukhudinov">
+                <img src="../images/Sardor.JPG" alt="Sardor Mukhudinov">
                 <div class="name" id="sardor-name">Sardorbek Mukhudinov</div>
                 <div class="role" id="sardor-role">CEO</div>
             </div>
 
             <div class="team-member">
-                <img src="images/Annika .JPG" alt="Annika">
+                <img src="../images/Annika .JPG" alt="Annika">
                 <div class="name" id="annika-name">Annika Mykkänen</div>
                 <div class="role" id="annika-role">Graphics</div>
             </div>
 
             <div class="team-member">
-                <img src="images/Ilona.jpg" alt="Ilona">
+                <img src="../images/Ilona.jpg" alt="Ilona">
                 <div class="name" id="ilona-name">Ilona Nikulina</div>
                 <div class="role" id="ilona-role">Web-page Developer</div>
             </div>
 
             <div class="team-member">
-                <img src="images/Jaakko.JPG" alt="Jaakko">
+                <img src="../images/Jaakko.JPG" alt="Jaakko">
                 <div class="name" id="jaakko-name">Jaakko Karti</div>
                 <div class="role" id="jaakko-role">Music & Trailer</div>
             </div>
@@ -286,9 +287,9 @@
         <script>
                 document.querySelector('.contact-form').addEventListener('submit', function(e) {
                     e.preventDefault(); // Estää oletuslähetyksen
-            
+
                     const form = this;
-            
+
                     fetch(form.action, {
                         method: 'POST',
                         body: new FormData(form),

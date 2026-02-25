@@ -16,7 +16,7 @@
             font-family: 'Press Start 2P'; /* Valitaan pikseligrafiikkamainen fontti, retro-tunnelmaa */
             font-size: 20px;  /* Yliajaa aiemman 'large' määrityksen – määrittää tekstin koon */
             margin:0; /* Poistaa oletusmarginaalit selaimen reunasta */
-            
+
         }
         ul {
             background-color: rgb(22, 145, 22); /* Vihreä tausta yläpalkin listalle */
@@ -41,7 +41,7 @@
         }
 
         .navbar {
-                display: flex; 
+                display: flex;
                 align-items: center;
                 justify-content: space-between;
                  /* Asettaa sisällöt kuten logon ja kielivalinnan tilavasti */
@@ -108,21 +108,22 @@
     <body>
         <nav class="navbar">
             <a href="#" class="logo" id="logo-link">
-                <img src="images/logowobg.png" alt="logo">
+                <img src="../images/logowobg.png" alt="logo">
             </a>
             <ul>
-                <li><a href="index.html" id="home-link">Home</a></li>
-                <li><a href="news.html" id="news-link">News</a></li>
-                <li><a href="contact.html" id="contact-link">Contact</a></li>
-                <li><a class="active" href="about-team.html"
+                <li><a href="../html/index.html" id="home-link">Home</a></li>
+                <li><a href="../html/news.html" id="news-link">News</a></li>
+                <li><a href="../html/contact.html"
+                        id="contact-link">Contact</a></li>
+                <li><a class="active" href="../html/about-team.html"
                         id="about-link">About Us</a></li>
-                <li><a href="about-yhta.html"
+                <li><a href="../html/about-yhta.html"
                         id="yhta-link">YHTÄ-project</a></li>
             </ul>
             <div class="language-selector">
-                <img src="images/finnish .png" alt="Finnish"
+                <img src="../images/finnish .png" alt="Finnish"
                     onclick="setLanguage('fi')">
-                <img src="images/English.png" alt="English"
+                <img src="../images/English.png" alt="English"
                     onclick="setLanguage('en')" class="active-language">
             </div>
         </nav>
@@ -155,17 +156,18 @@
             <div class="footer-logos-container">
 
                 <div class="footer-logos-repeat">
-                    <img src="images/TampereenAMK logo.png" alt="Logo 1">
-                    <img src="images/Tampereen logo.png" alt="Logo 2">
-                    <img src="images/Tietojenkäsittely logo.png" alt="Logo 3">
-                    <img src="images/Council logo.jpg" alt="Logo 4">
-                    <img src="images/EU logo.png" alt="Logo5">
-                    <img src="images/Finnpark logo.png" alt="Logo6">
-                    <img src="images/maptionnaire logo.jpg" alt="Logo7">
-                    <img src="images/insta logo .png" alt="Logo 8">
-                    <img src="images/Louhe logo.png" alt="Logo 9">
-                    <img src="images/Sitowise logo.png" alt="Logo 10">
-                    <img src="images/Moovy logo.png" alt="Logo 11">
+                    <img src="../images/TampereenAMK logo.png" alt="Logo 1">
+                    <img src="../images/Tampereen logo.png" alt="Logo 2">
+                    <img src="../images/Tietojenkäsittely logo.png"
+                        alt="Logo 3">
+                    <img src="../images/Council logo.jpg" alt="Logo 4">
+                    <img src="../images/EU logo.png" alt="Logo5">
+                    <img src="../images/Finnpark logo.png" alt="Logo6">
+                    <img src="../images/maptionnaire logo.jpg" alt="Logo7">
+                    <img src="../images/insta logo .png" alt="Logo 8">
+                    <img src="../images/Louhe logo.png" alt="Logo 9">
+                    <img src="../images/Sitowise logo.png" alt="Logo 10">
+                    <img src="../images/Moovy logo.png" alt="Logo 11">
                 </div>
             </footer>
 
@@ -184,9 +186,9 @@
                         "contact-link": "Contact",
                          "about-link": "About Us",
                          "yhta-link": "YHTÄ-project"
-                    
+
                     };
-        
+
                     const fiText = {
                         "about-heading": "Tietoa Nostalgy School Runista",
                         "story-title": "Lizzard Productionsin Tarina 🦎🎮",
@@ -201,9 +203,9 @@
                 "about-link": "Meistä",
                 "yhta-link": "YHTÄ-Hanke"
                     };
-        
+
                     const text = lang === 'fi' ? fiText : enText;
-        
+
                     // Update all text content based on the selected language
                     for (const key in text) {
                         const element = document.getElementById(key);
@@ -211,7 +213,7 @@
                             element.textContent = text[key];
                         }
                     }
-        
+
                     // Toggle language selector active state
                     const languages = document.querySelectorAll('.language-selector img');
                     languages.forEach(langImg => langImg.classList.remove('active-language'));
