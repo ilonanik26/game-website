@@ -1,149 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <title>News - Nostlgy School Run</title>
+
         <link
             href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
             rel="stylesheet">
-        <title>News - Nostlgy School Run</title>
+
         <style>
-            /* BODY: koko sivun yleiset tyylit */
         body {
-            background-image: linear-gradient(rgba(52, 251, 122, 0.5), rgba(70, 232, 208, 0.5));  /* Taustaksi asetetaan liukuvärjäys kahdesta väristä läpinäkyvällä efektillä */
-
-            background-repeat: no-repeat; /* Estää taustakuvan tai -gradientin toistumisen */
-
-            min-height: 100vh; /* Vähimmäiskorkeus on 100% näytön korkeudesta (full viewport height) */
-            text-align: center; /* Kaikki tekstit oletuksena keskitetään*/
-            font-family: 'Press Start 2P';  /* Käytetään retrotyylistä fonttia – muistuttaa 8-bit pelien tekstiä */
-            font-size: 20px; /* Tämä on lopullinen fonttikoko*/
-            margin:0; /* Poistaa oletusmarginaalit sivulta */
-        }
-        /* NAVIGAATIO (yläpalkki) */
-        ul {
-            background-color: rgb(22, 145, 22);  /* Tummanvihreä taustaväri valikolle */
-
-            list-style-type: none; /* Poistaa listapallot */
-            margin: 0;
-            padding: 0;
-            /* Nollaa marginaalit ja sisennykset listalta */
-            overflow: hidden;
-             /* Estää sisällön valumisen ulos, jos esim. elementit kelluvat */
-        }
-        li {
-            float: left;
-            /* Jokainen listaelementti kelluu vierekkäin vaakasuunnassa */
-        }
-        a {
-            display: block;
-            padding: 14px 16px;
-            /* Sisäinen tila linkkien ympärillä */
-            color: white;
+            background-image: linear-gradient(rgba(52, 251, 122, 0.5), rgba(70, 232, 208, 0.5));
+            background-repeat: no-repeat;
+            min-height: 100vh;
             text-align: center;
-            text-decoration: none;
-            /* Poistaa alleviivauksen ja keskittää tekstin */
+            font-family: 'Press Start 2P';
+            font-size: 20px;
+            margin: 0;
         }
 
+        /* NAVBAR */
         .navbar {
-                display: flex; 
-                align-items: center;
-                justify-content: space-between;
-                /* Flexboxilla logo vasemmalle, linkit oikealle */
-                padding: 10px 20px;
-                background-color: rgb(22, 145,22);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: rgb(22, 145, 22);
         }
 
         .logo img {
-                width:100px;
-                border-radius: 50px;
-                /* Tekee logosta pyöreähkön */
-                float: left;
-                margin-right: 10px;
-                /* Pieni tila logon ja tekstin väliin */
+            width: 100px;
+            border-radius: 50px;
+            margin-right: 10px;
         }
 
+        ul {
+            background-color: rgb(22, 145, 22);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
+        li {
+            float: left;
+        }
+
+        a {
+            display: block;
+            padding: 14px 16px;
+            color: white;
+            text-decoration: none;
+        }
 
         li a:hover {
             background-color: #111;
-             /* Kun hiiri viedään linkin päälle, taustaväri muuttuu tummemmaksi */
         }
+
         .active {
             background-color: darkgreen;
-            /* Aktiivinen linkki (valittu sivu) korostetaan eri värillä */
         }
-         /* POSTERI-KUVA*/
-        .poster img {
-            size: 200px;
-            height: auto;  /* Korkeus skaalaantuu leveyden mukaan automaattisesti */
 
+        /* LANGUAGE ICONS */
+        .language-selector img {
+            width: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
 
+        .active-language {
+            border: 2px solid darkgreen;
+        }
+
+        /* NEWS CONTENT */
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .news-date {
+            font-size: 1rem;
+            color: pink;
+            font-weight: bold;
+            margin-bottom: 15px;
             display: block;
-            margin: 20px auto;  /* Keskittää kuvan vaakasuunnassa ja lisää ylä- ja alareunaan marginaalit */
-            max-width: 400px;  /* Kuva ei veny yli 400px */
-            border-radius: 10px;  /* Pehmeät pyöristetyt kulmat */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hento varjo kuvan taakse */
-            
         }
-        .poster{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-             /* Keskittää posterin sisällön molempiin suuntiin */
+
+        .news-date,
+        .poster,
+        .news-text {
+            text-align: left;
+            margin-left: 10%;
+            margin-right: 10%;
         }
-        /* Uutisten tyyli */
-    h1 {
-        font-size: 2rem;
-        color:#333;
-        margin-bottom: 10px;
-        /* Tumma otsikkoväri ja pieni marginaali alapuolelle */
-    }
 
-    /*Uutisten kuvaus*/
-    p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        /* Mukava riviväli helpottaa lukemista */
-        color: #555;
-         /* Vaaleanharmaa teksti */
+        /* POSTER IMAGE */
+        .poster img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
 
-        margin-bottom: 20px;
-        /* Tila tekstin ja seuraavan elementin välille */
-    }
-
-    /*Erityinen tyyli päivämäärälle*/
-   .news-date {
-    font-size: 1 rem;
-    color: pink;
-    font-weight: bold;
-    margin-bottom: 15px;
-    display: block;
-    /* Näytetään omalla rivillään */
-   }       
-/* Asetetaan nämä kolme sisältöelementtiä keskelle leveydeltään*/
-.news-date,
-.poster,
-.news-text {
-    text-align: left; /* Tekstit vasempaan reunaan (parempi luettavuus) */
-    margin-left: 10%;
-    margin-right: 10%;
-    /* Jättää vasemmalle ja oikealle tilaa eli "white space" */
-}
-/* Kielivalinnan lippukuvat */
-.language-selector img {
-                width:30px;
-                margin-left: 10px;
-                cursor: pointer;
-                /* Klikattava osoitin ja pientä väliä kuvien väliin */
-            }
-            .active-language {
-                border: 2px solid darkgreen;
-                /* Valittu kieli saa korostuksen kehyksellä */
-            }
-
-
+        iframe {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
     </style>
     </head>
+
     <body>
+
         <nav class="navbar">
             <a href="#" class="logo">
                 <img src="images/logowobg.png" alt="logo">
@@ -160,10 +138,9 @@
             </ul>
 
             <div class="language-selector">
-                <img src="images/finnish .png" alt="Finnish"
-                    onclick="setLanguage('fi')">
-                <img src="images/English.png" alt="English"
-                    onclick="setLanguage('en')" class="active-language">
+                <img src="images/finnish.png" alt="Finnish">
+                <img src="images/english.png" alt="English"
+                    class="active-language">
             </div>
         </nav>
 
@@ -171,31 +148,28 @@
         <p id="news-description">Here you will find all the latest updates about
             Nostlgy School Run.</p>
 
-        <time class="news-date" id="news-date">9.04.2025 17:56</time>
-        <p id="news-content">Hey! We have great news! Our game is out soon! Come
-            and check this out!</p>
+        <time class="news-date">9.04.2025 17:56</time>
+        <p>Hey! We have great news! Our game is out soon! Come and check this
+            out!</p>
 
         <div class="poster">
-            <img src="images/Peli messut (1).png" alt="poster">
+            <img src="images/peli-messut-1.png" alt="poster">
         </div>
 
-        <time class="news-date" id="news-date">19.04.2025 16:47</time>
-        <p id="news-trailer"> Hey there! We have our trailer out now! You can
-            watch it on YouTube by clicking on the video below!</p>
-        <iframe id="video-en" width="560" height="315"
-            src="https://www.youtube.com/embed/I0BdrNaxjoc?si=G_tDf2FZz56nBtMb"
+        <time class="news-date">19.04.2025 16:47</time>
+        <p>Hey there! We have our trailer out now! You can watch it below!</p>
+
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/I0BdrNaxjoc"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen></iframe>
 
-        <iframe id="video-fi" width="560" height="315"
-            src="https://www.youtube.com/embed/NHKbMER6wIw?si=ZZQz166Rxhfo4bhv"
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/NHKbMER6wIw"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen></iframe>
-
         <script>
         function setLanguage(language) {
     const languageData = {
